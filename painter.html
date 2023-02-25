@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Painters Page</title>
+    </head>
+ 
+<body>
+    <h1>Painter entry Roshini Bikkina</h1>
+
+
+<form>
+    <label for="Secret-Painter-Name">The hidden painter name-</label>
+    <input type="password" id="Secret-Painter-Name" name="Secret-Painter-Name" value="Monet">
+    <br>
+    <label for="Guess-Painter-Name">Guess the painter-</label>
+    <input type="text" id="Guess-Painter-Name" name="Guess-Painter-Name">
+    <br>
+    <button type="button" onclick="checkPainter()">Check the guess </button>
+  </form>
+  
+  <p>Good- <span id="good-count">0</span>, Oops- <span id="oops-count">0</span></p>
+
+  <script>
+    var good = 0;
+    var oops = 0;
+
+    function checkPainter() {
+      var SecretPainter = document.getElementById("Secret-Painter-Name").value;
+      var GuessedPainter = document.getElementById("Guess-Painter-Name").value;
+      
+      if (GuessedPainter.toLowerCase() === SecretPainter.toLowerCase()) {
+        good++;
+        alert("You got it right");
+      } else {
+        oops++;
+        alert("Sorry");
+      }
+      
+      document.getElementById("good-count").innerHTML = good;
+      document.getElementById("oops-count").innerHTML = oops;
+    }
+  </script>
+
+</body>
+</html> 
