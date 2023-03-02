@@ -20,6 +20,13 @@
   
   <p>Good- <span id="good-count">0</span>, Oops- <span id="oops-count">0</span></p>
 
+  <br>
+<div class="container">
+    <img src="Indianpink.jpg" id="image" onclick="selectImage()" alt="Indianpink" style="width: 100px;height: 100px;">
+</div>
+<p id="result">The results will be replaced </p>
+
+
   <script>
     var good = 0;
     var oops = 0;
@@ -38,6 +45,21 @@
       
       document.getElementById("good-count").innerHTML = good;
       document.getElementById("oops-count").innerHTML = oops;
+
+      function selectImage() {
+    switch (useImage) {
+        case 1: useImage = useImage + 1
+            image.src="Indianpink.jpg";
+            break;
+        case 2: useImage = useImage + 1
+            image.src = "Kangaroopaw.jpg";
+            break;
+        case 3: useImage = useImage + 1
+            image.src = "Kaffirlilly.jpg";
+            break;
+    }
+}
+
     }
   </script>
 
